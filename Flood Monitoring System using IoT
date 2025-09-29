@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main() {
+    srand(time(0));
+    float waterLevel;   // in meters
+    float rainfall;     // mm/hr
+    float flowRate;     // m^3/s
+    // Thresholds for alerts
+    float waterThreshold = 5.0;  // meters
+    float rainThreshold = 50.0;  // mm/hr
+    float flowThreshold = 200.0; // m^3/s
+    printf("=== Flood Monitoring System Simulation ===\n");
+    for (int i = 1; i <= 10; i++) {  // simulate 10 readings
+        // Simulate sensor readings
+        waterLevel = ((float)rand() / RAND_MAX) * 10;  // 0 to 10 m
+        rainfall   = ((float)rand() / RAND_MAX) * 100; // 0 to 100 mm/hr
+        flowRate   = ((float)rand() / RAND_MAX) * 300; // 0 to 300 m^3/s
+        printf("\nReading %d:\n", i);
+        printf("Water Level: %.2f m\n", waterLevel);
+        printf("Rainfall: %.2f mm/hr\n", rainfall);
+        printf("Flow Rate: %.2f m^3/s\n", flowRate);
+        // Check thresholds and alert
+        if (waterLevel > waterThreshold)
+            printf("ALERT: Water level high! Risk of flooding.\n");
+        if (rainfall > rainThreshold)
+            printf("ALERT: Heavy rainfall detected!\n");
+        if (flowRate > flowThreshold)
+            printf("ALERT: River flow is high!\n");
+        if (waterLevel <= waterThreshold && rainfall <= rainThreshold && flowRate <= flowThreshold)
+            printf("Status: Normal.\n");
+    }
+    return 0;
+}    
