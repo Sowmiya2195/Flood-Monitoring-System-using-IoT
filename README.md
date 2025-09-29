@@ -1,2 +1,1 @@
-# Flood-Monitoring-System-using-IoT
-A Flood Monitoring System using IoT employs water level, rain, and flow sensors to track rising water in real time. Data is sent to a cloud platform, enabling alerts via SMS or app to authorities and residents, helping prevent damage, plan evacuations, and ensure timely disaster response.
+This system monitors water levels, rainfall, and river flow using IoT sensors. Data is sent to the cloud, where authorities and residents receive real-time alerts via app or SMS. It helps in early warning, preventing damage, and ensuring timely evacuation during floods.
